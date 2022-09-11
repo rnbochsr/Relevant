@@ -1,0 +1,42 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: scans/dirb2.scan
+START_TIME: Sun Sep 11 20:23:02 2022
+URL_BASE: http://10.10.113.68/
+WORDLIST_FILES: /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+
+-----------------
+
+GENERATED WORDS: 219174
+(!) WARNING: Wordlist is too large. This will take a long time to end.
+    (Use mode '-w' if you want to scan anyway)
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: scans/dirb2.scan
+START_TIME: Sun Sep 11 20:47:43 2022
+URL_BASE: http://10.10.113.68/
+WORDLIST_FILES: /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+OPTION: Not Stopping on warning messages
+
+-----------------
+
+GENERATED WORDS: 219174
+(!) WARNING: Wordlist is too large. This will take a long time to end.
+    (Use mode '-w' if you want to scan anyway)
+
+---- Scanning URL: http://10.10.113.68/ ----
+
+(!) FATAL: Too many errors connecting to host
+    (Possible cause: COULDNT CONNECT)
+
+-----------------
+END_TIME: Sun Sep 11 21:15:34 2022
+DOWNLOADED: 0 - FOUND: 0
