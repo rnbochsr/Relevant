@@ -1,0 +1,48 @@
+# Nmap 7.80 scan initiated Fri Sep 16 00:52:51 2022 as: nmap -oN nmap.vuln -Pn -script vuln -p 80,135,139,445,3389,5985,49663,49667,49669 10.10.180.52
+Nmap scan report for ip-10-10-180-52.eu-west-1.compute.internal (10.10.180.52)
+Host is up (0.00051s latency).
+
+PORT      STATE SERVICE
+80/tcp    open  http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+135/tcp   open  msrpc
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+139/tcp   open  netbios-ssn
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+445/tcp   open  microsoft-ds
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+3389/tcp  open  ms-wbt-server
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+5985/tcp  open  wsman
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49663/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49667/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+49669/tcp open  unknown
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+MAC Address: 02:39:85:EE:75:E9 (Unknown)
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: ERROR: Script execution failed (use -d to debug)
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+
+# Nmap done at Fri Sep 16 00:55:16 2022 -- 1 IP address (1 host up) scanned in 145.37 seconds

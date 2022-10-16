@@ -1,0 +1,42 @@
+root@ip-10-10-17-191:~# nmap -p80,135,139,445,3389,5985,49663,49667,49669 --script vuln 10.10.27.123
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2022-09-22 22:59 BST
+Nmap scan report for ip-10-10-27-123.eu-west-1.compute.internal (10.10.27.123)
+Host is up (0.00040s latency).
+
+PORT      STATE    SERVICE
+80/tcp    open     http
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+3389/tcp  open     ms-wbt-server
+|_sslv2-drown: 
+5985/tcp  open     wsman
+49663/tcp open     unknown
+49667/tcp open     unknown
+49669/tcp filtered unknown
+MAC Address: 02:DA:E5:F2:1D:5B (Unknown)
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: ERROR: Script execution failed (use -d to debug)
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_smb-vuln-regsvc-dos: ERROR: Script execution failed (use -d to debug)
+
+Nmap done: 1 IP address (1 host up) scanned in 139.45 seconds

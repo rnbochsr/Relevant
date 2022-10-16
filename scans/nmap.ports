@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Mon Sep 12 01:05:12 2022 as: nmap -p- -T5 -oN nmap.ports target
+Nmap scan report for target (10.10.49.81)
+Host is up (0.00099s latency).
+Not shown: 65526 filtered ports
+PORT      STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+5985/tcp  open  wsman
+49663/tcp open  unknown
+49667/tcp open  unknown
+49669/tcp open  unknown
+MAC Address: 02:59:99:22:8F:9B (Unknown)
+
+# Nmap done at Mon Sep 12 01:06:06 2022 -- 1 IP address (1 host up) scanned in 54.41 seconds
